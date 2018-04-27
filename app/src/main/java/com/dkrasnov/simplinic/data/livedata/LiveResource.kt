@@ -1,6 +1,6 @@
 package com.dkrasnov.simplinic.data.livedata
 
-class LiveResource<T>(val status: Status, val data: T?, val error: Throwable?) {
+open class LiveResource<T>(val status: Status, val data: T?, val error: Throwable?) {
 
     companion object {
         fun <K> success(data: K) = LiveResource(Status.SUCCESS, data, null)
